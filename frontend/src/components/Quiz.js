@@ -9,6 +9,7 @@ function Quiz({ nickname, onComplete }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [startTime, setStartTime] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     loadQuestions();
@@ -47,10 +48,16 @@ function Quiz({ nickname, onComplete }) {
   };
 
   const handleSubmit = async () => {
+    // Prevent multiple submissions
+    if (submitting) return;
+    
     if (Object.keys(selectedAnswers).length < questions.length) {
       setError('Please answer all questions before submitting.');
       return;
     }
+
+    setSubmitting(true);
+    setError('');
 
     const timeUsedSeconds = Math.floor((Date.now() - startTime) / 1000);
 
@@ -70,6 +77,7 @@ function Quiz({ nickname, onComplete }) {
       onComplete(result);
     } catch (err) {
       setError('Failed to submit quiz. Please try again.');
+      setSubmitting(false);
     }
   };
 
@@ -130,6 +138,7 @@ function Quiz({ nickname, onComplete }) {
                   key={option}
                   className={`option-button ${isSelected ? 'selected' : ''}`}
                   onClick={() => handleAnswerSelect(option)}
+                  disabled={submitting}
                 >
                   <span className="option-label">{option}</span>
                   <span className="option-text">{optionText}</span>
@@ -144,23 +153,27 @@ function Quiz({ nickname, onComplete }) {
         <div className="quiz-navigation">
           <button
             onClick={handlePrevious}
-            disabled={currentQuestion === 0}
+            disabled={currentQuestion === 0 || submitting}
             className="nav-button"
           >
             ← Previous
           </button>
 
           {currentQuestion < questions.length - 1 ? (
-            <button onClick={handleNext} className="nav-button">
+            <button 
+              onClick={handleNext} 
+              className="nav-button"
+              disabled={submitting}
+            >
               Next →
             </button>
           ) : (
             <button
               onClick={handleSubmit}
               className="submit-button"
-              disabled={!allAnswered}
+              disabled={!allAnswered || submitting}
             >
-              Submit Quiz
+              {submitting ? 'Submitting...' : 'Submit Quiz'}
             </button>
           )}
         </div>
