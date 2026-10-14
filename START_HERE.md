@@ -124,8 +124,9 @@ Here are the essential guides you need:
 | File | Purpose | When to Use |
 |------|---------|-------------|
 | **`START_HERE.md`** | 👈 This file - overview and getting started | Start here first |
+| **`QUICK_REFERENCE.md`** | One-page deployment cheat sheet | Keep open while deploying ⭐ |
 | **`NEON_SETUP_ONLY.md`** | Set up Neon PostgreSQL database | Step 1 - Database setup (5 min) |
-| **`NODEJS_DEPLOYMENT_GUIDE.md`** | Deploy Node.js backend + frontend to Vercel | Step 2 - Deploy everything (15 min) ⭐ |
+| **`NODEJS_DEPLOYMENT_GUIDE.md`** | Deploy Node.js backend + frontend to Vercel | Step 2 - Deploy everything (15 min) |
 | **`MIGRATION_NOTICE.md`** | Explains backend migration from Java to Node.js | Optional - for understanding changes |
 | **`README.md`** | Project overview and local setup | Learn about the project |
 | **`API_DOCUMENTATION.md`** | API endpoints reference | When developing features |
