@@ -2,6 +2,19 @@
 
 A full-stack quiz application built with React, Spring Boot, and PostgreSQL. Users answer 5 randomly selected questions from a pool of 10, and their scores are tracked on a leaderboard based on score and completion time.
 
+---
+
+## 🚀 Ready to Deploy?
+
+**For complete deployment instructions, see:** [`START_HERE.md`](START_HERE.md)
+
+**Quick deployment path:**
+1. 📖 [`NEON_SETUP_ONLY.md`](NEON_SETUP_ONLY.md) - Set up database (5 min)
+2. 🚢 [`QUICK_DEPLOY.md`](QUICK_DEPLOY.md) - Deploy to Vercel (15 min)
+3. ✅ Test and go live!
+
+---
+
 ## Features
 
 - **Random Questions**: 5 questions randomly selected from a pool of 10 questions
