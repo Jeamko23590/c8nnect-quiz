@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    }
+  "rewrites": [
+    { "source": "/api/quiz/questions", "destination": "/api/quiz/questions" },
+    { "source": "/api/quiz/submit", "destination": "/api/quiz/submit" },
+    { "source": "/api/quiz/leaderboard", "destination": "/api/quiz/leaderboard" }
   ]
 }
