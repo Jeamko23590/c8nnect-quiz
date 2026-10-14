@@ -4,6 +4,18 @@ Welcome! This guide will help you deploy your quiz application from start to fin
 
 ---
 
+## ⚠️ IMPORTANT UPDATE
+
+**Backend has been migrated from Spring Boot (Java) to Node.js/Express for native Vercel support!**
+
+This means:
+- ✅ **Easier deployment** - No Java configuration needed
+- ✅ **Faster cold starts** - Serverless functions start instantly  
+- ✅ **Same functionality** - All features work exactly the same
+- ✅ **Frontend unchanged** - No changes needed to React app
+
+---
+
 ## 📖 What You're Deploying
 
 **Quiz Application Features:**
@@ -69,21 +81,21 @@ Welcome! This guide will help you deploy your quiz application from start to fin
 
 After completing Neon setup, deploy your application to Vercel.
 
-📖 **Follow the guide**: `QUICK_DEPLOY.md`
+📖 **Follow the guide**: `NODEJS_DEPLOYMENT_GUIDE.md`
 
 **What you'll do:**
-1. Deploy backend to Vercel (5 min)
+1. Deploy backend to Vercel (5 min) - Uses `backend-node` folder
 2. Deploy frontend to Vercel (5 min)
 3. Update CORS settings (2 min)
 4. Test everything (3 min)
 
 **What you'll get:**
-- ✅ Live backend API
-- ✅ Live frontend website
+- ✅ Live backend API (Node.js/Express)
+- ✅ Live frontend website (React)
 - ✅ Automatic deployments on git push
 - ✅ Free hosting with custom domain support
 
-**👉 After Neon setup, open `QUICK_DEPLOY.md` and deploy**
+**👉 After Neon setup, open `NODEJS_DEPLOYMENT_GUIDE.md` and deploy**
 
 ---
 
@@ -113,9 +125,10 @@ Here are all the guides in this project:
 |------|---------|-------------|
 | **`START_HERE.md`** | 👈 This file - overview and navigation | Start here first |
 | **`NEON_SETUP_ONLY.md`** | Set up Neon database | Step 2 - Database setup |
-| **`QUICK_DEPLOY.md`** | Deploy to Vercel after Neon setup | Step 3 - Vercel deployment |
+| **`NODEJS_DEPLOYMENT_GUIDE.md`** | Deploy Node.js backend + frontend to Vercel | Step 3 - Vercel deployment ⭐ |
+| **`DEPLOYMENT_QUICK_REFERENCE.md`** | Quick reference card | Keep open while deploying |
 | **`VERCEL_ENV_VARIABLES.md`** | Reference for all environment variables | When configuring Vercel |
-| **`NEON_VERCEL_DEPLOYMENT.md`** | Comprehensive detailed guide (50+ pages) | If you want all details |
+| **`NEON_VERCEL_DEPLOYMENT.md`** | Original Spring Boot guide (deprecated) | Reference only |
 | **`DEPLOYMENT_CHECKLIST.md`** | Quick checklist to track progress | Track what's done |
 | **`README.md`** | Project overview and local setup | Learn about the project |
 | **`API_DOCUMENTATION.md`** | API endpoints reference | When developing features |
@@ -183,8 +196,8 @@ You don't need to set these up - they're already done:
 3. 💾 Save your connection string
 
 **Next:**
-1. 📖 Open `QUICK_DEPLOY.md`
-2. 🚢 Deploy backend to Vercel (5 minutes)
+1. 📖 Open `NODEJS_DEPLOYMENT_GUIDE.md`
+2. 🚢 Deploy backend to Vercel (5 minutes) - Uses Node.js
 3. 🚢 Deploy frontend to Vercel (5 minutes)
 4. 🔄 Update CORS settings (2 minutes)
 
