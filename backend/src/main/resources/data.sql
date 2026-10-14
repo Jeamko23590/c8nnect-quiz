@@ -1,0 +1,72 @@
+-- Insert all 10 questions into the database
+INSERT INTO questions (question_text, option_a, option_b, option_c, option_d, correct_answer) VALUES
+('A store wants to record sales and automatically update transactions. What system does it need?', 
+ 'Inventory Management System', 
+ 'Point-of-Sale (POS) System', 
+ 'Appointment Booking System', 
+ 'Learning Management System', 
+ 'B'),
+
+('A business wants to know how many products are left in stock. What system does it need?', 
+ 'Inventory Management System', 
+ 'Payroll System', 
+ 'Customer Relationship Management System', 
+ 'Reservation System', 
+ 'A'),
+
+('A salon wants customers to book appointments online. What system does it need?', 
+ 'Accounting System', 
+ 'Inventory Management System', 
+ 'Appointment Booking System', 
+ 'Document Management System', 
+ 'C'),
+
+('A restaurant wants customers to order food online. What system does it need?', 
+ 'Payroll System', 
+ 'Online Ordering System', 
+ 'Employee Management System', 
+ 'Inventory Management System', 
+ 'B'),
+
+('A company wants to store customer information and track customer interactions. What system does it need?', 
+ 'Customer Relationship Management (CRM) System', 
+ 'Inventory Management System', 
+ 'Payroll System', 
+ 'Learning Management System', 
+ 'A'),
+
+('A business wants to calculate employee salaries and manage deductions. What system does it need?', 
+ 'Reservation System', 
+ 'Point-of-Sale System', 
+ 'Payroll System', 
+ 'Customer Support System', 
+ 'C'),
+
+('A school wants students to access lessons, activities, and learning materials online. What system does it need?', 
+ 'Inventory Management System', 
+ 'Learning Management System (LMS)', 
+ 'Accounting System', 
+ 'Appointment Booking System', 
+ 'B'),
+
+('A company wants to track customer complaints and support requests. What system does it need?', 
+ 'Customer Support or Helpdesk System', 
+ 'Payroll System', 
+ 'Online Ordering System', 
+ 'Inventory Management System', 
+ 'A'),
+
+('A business wants to monitor income, expenses, and financial reports. What system does it need?', 
+ 'Reservation System', 
+ 'Employee Management System', 
+ 'Accounting System', 
+ 'Learning Management System', 
+ 'C'),
+
+('A company wants to manage employee records, attendance, and leave requests. What system does it need?', 
+ 'Online Ordering System', 
+ 'Human Resource Management System (HRMS)', 
+ 'Customer Relationship Management System', 
+ 'Point-of-Sale System', 
+ 'B')
+ON CONFLICT DO NOTHING;

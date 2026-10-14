@@ -1,0 +1,172 @@
+.leaderboard {
+  margin-top: 30px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.leaderboard-card {
+  overflow: hidden;
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.leaderboard-header h2 {
+  margin: 0;
+}
+
+.refresh-button {
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  background: transparent;
+  border: 2px solid #667eea;
+  color: #667eea;
+  min-width: auto;
+}
+
+.refresh-button:hover {
+  background: #667eea;
+  color: white;
+}
+
+.leaderboard-table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.leaderboard-table th {
+  padding: 15px 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.leaderboard-table td {
+  padding: 15px 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.leaderboard-row {
+  transition: background-color 0.3s ease;
+}
+
+.leaderboard-row:hover {
+  background-color: #f8f9ff;
+}
+
+.leaderboard-row.top-three {
+  background-color: #fffbf0;
+}
+
+.leaderboard-row.top-three:hover {
+  background-color: #fff8e1;
+}
+
+.rank-cell {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: 80px;
+}
+
+.name-cell {
+  font-weight: 600;
+  color: #333;
+  min-width: 120px;
+}
+
+.nickname {
+  display: inline-block;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.score-cell {
+  font-weight: bold;
+  color: #667eea;
+  font-size: 1.1rem;
+  width: 80px;
+}
+
+.time-cell {
+  color: #666;
+  width: 100px;
+}
+
+.date-cell {
+  color: #999;
+  font-size: 0.9rem;
+  min-width: 150px;
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+  padding: 40px 20px;
+  font-size: 1.1rem;
+}
+
+.leaderboard-note {
+  text-align: center;
+  padding: 15px;
+  background: #f8f9ff;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.leaderboard-note p {
+  color: #667eea;
+  font-weight: 600;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .leaderboard-table {
+    font-size: 0.9rem;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 10px 5px;
+  }
+
+  .date-column {
+    display: none;
+  }
+
+  .rank-cell {
+    width: 60px;
+    font-size: 1.1rem;
+  }
+
+  .nickname {
+    max-width: 100px;
+  }
+}
