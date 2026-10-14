@@ -28,7 +28,7 @@ In the configuration screen:
 
 **Project Settings:**
 - **Project Name**: `c8nnect-quiz-backend` (or your choice)
-- **Framework Preset**: `Other`
+- **Framework Preset**: `Other` (Spring Boot/Java)
 - **Root Directory**: Click **"Edit"** → Type: `backend` → Click **"Continue"**
 
 **Build Settings:**

@@ -150,7 +150,7 @@ spring.web.cors.allow-credentials=true
 2. Click **"Add New..."** → **"Project"**
 3. Import your GitHub repository (`quiz-app`)
 4. Configure the project:
-   - **Framework Preset**: Other
+   - **Framework Preset**: Other (for Spring Boot/Java applications)
    - **Root Directory**: `backend`
    - Click **"Environment Variables"**
 

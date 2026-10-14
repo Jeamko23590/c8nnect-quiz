@@ -40,10 +40,11 @@ jdbc:postgresql://ep-xxxxx.REGION.aws.neon.tech/neondb?user=USER&password=PASS&s
 ```
 1. Go to: https://vercel.com/new
 2. Import: Jeamko23590/c8nnect-quiz
-3. Root Directory: backend
-4. Add Environment Variables (see below)
-5. Deploy
-6. Copy backend URL
+3. Framework Preset: Other
+4. Root Directory: backend
+5. Add Environment Variables (see below)
+6. Deploy
+7. Copy backend URL
 ```
 
 ### Environment Variables:
