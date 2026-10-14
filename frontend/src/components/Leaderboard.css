@@ -22,13 +22,13 @@
   padding: 8px 15px;
   font-size: 1.2rem;
   background: transparent;
-  border: 2px solid #667eea;
-  color: #667eea;
+  border: 2px solid #dc3545;
+  color: #dc3545;
   min-width: auto;
 }
 
 .refresh-button:hover {
-  background: #667eea;
+  background: #dc3545;
   color: white;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .leaderboard-table thead {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
   color: white;
 }
 
@@ -64,15 +64,15 @@
 }
 
 .leaderboard-row:hover {
-  background-color: #f8f9ff;
+  background-color: #fff5f5;
 }
 
 .leaderboard-row.top-three {
-  background-color: #fffbf0;
+  background-color: #fff0f0;
 }
 
 .leaderboard-row.top-three:hover {
-  background-color: #fff8e1;
+  background-color: #ffe5e5;
 }
 
 .rank-cell {
@@ -98,7 +98,7 @@
 
 .score-cell {
   font-weight: bold;
-  color: #667eea;
+  color: #dc3545;
   font-size: 1.1rem;
   width: 80px;
 }
@@ -124,13 +124,13 @@
 .leaderboard-note {
   text-align: center;
   padding: 15px;
-  background: #f8f9ff;
+  background: #fff5f5;
   border-radius: 8px;
   margin-top: 15px;
 }
 
 .leaderboard-note p {
-  color: #667eea;
+  color: #dc3545;
   font-weight: 600;
   margin: 0;
   font-size: 0.95rem;
