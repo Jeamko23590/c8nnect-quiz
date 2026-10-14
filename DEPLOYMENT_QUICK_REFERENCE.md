@@ -48,11 +48,24 @@ jdbc:postgresql://ep-xxxxx.REGION.aws.neon.tech/neondb?user=USER&password=PASS&s
 ```
 
 ### Environment Variables:
-```
-DATABASE_URL               = [Your Neon JDBC string]
-SPRING_PROFILES_ACTIVE     = prod
-FRONTEND_URL               = http://localhost:3000
-```
+
+Click **"Add More"** button for each variable. Add these **3 variables**:
+
+**Variable 1:**
+- Key: `DATABASE_URL`
+- Value: `[Paste your Neon JDBC connection string here]`
+
+**Variable 2:**
+- Key: `SPRING_PROFILES_ACTIVE`
+- Value: `prod`
+
+**Variable 3:**
+- Key: `FRONTEND_URL`
+- Value: `http://localhost:3000`
+
+**Important:** After adding each variable, click **"+ Add More"** to add the next one.
+
+Leave **"Environments"** as `Production and Preview` (default).
 
 ### Test Backend:
 ```
@@ -78,9 +91,21 @@ Should return JSON with questions ✅
 ```
 
 ### Environment Variable:
+
+Click **"Add More"** button and add this **1 variable**:
+
+**Variable:**
+- Key: `REACT_APP_API_BASE_URL`
+- Value: `https://YOUR-BACKEND-URL.vercel.app/api/quiz`
+
+**Replace YOUR-BACKEND-URL** with your actual backend URL from Step 2.
+
+Example: If backend is `https://c8nnect-quiz-backend.vercel.app`, use:
 ```
-REACT_APP_API_BASE_URL = https://YOUR-BACKEND-URL.vercel.app/api/quiz
+https://c8nnect-quiz-backend.vercel.app/api/quiz
 ```
+
+Leave **"Environments"** as `Production and Preview` (default).
 
 **✅ Done? → Continue to CORS update**
 

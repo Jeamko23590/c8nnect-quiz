@@ -44,6 +44,13 @@ Click **"Environment Variables"** and add these **3 variables**:
 | `SPRING_PROFILES_ACTIVE` | `prod` |
 | `FRONTEND_URL` | `http://localhost:3000` (temporary, we'll update this) |
 
+**How to add each variable:**
+1. In the **Key** field, type the variable name (e.g., `DATABASE_URL`)
+2. In the **Value** field, paste or type the value
+3. Leave **Environments** as `Production and Preview` (default)
+4. Click **"+ Add More"** to add the next variable
+5. Repeat for all 3 variables
+
 **Important:** Your `DATABASE_URL` should look like:
 ```
 jdbc:postgresql://ep-xxxxx.us-east-2.aws.neon.tech/neondb?user=yourusername&password=yourpassword&sslmode=require
@@ -91,12 +98,19 @@ Click **"Environment Variables"** and add this **1 variable**:
 |------|-------|
 | `REACT_APP_API_BASE_URL` | `https://YOUR-BACKEND-URL.vercel.app/api/quiz` |
 
+**How to add:**
+1. In the **Key** field, type: `REACT_APP_API_BASE_URL`
+2. In the **Value** field, paste your backend URL + `/api/quiz`
+3. Leave **Environments** as `Production and Preview` (default)
+
 **Replace `YOUR-BACKEND-URL`** with the backend URL from Step 1.3
 
 Example: If your backend is `https://c8nnect-quiz-backend.vercel.app`, then use:
 ```
 https://c8nnect-quiz-backend.vercel.app/api/quiz
 ```
+
+**Note:** Make sure to include `/api/quiz` at the end!
 
 ### 2.3 Deploy Frontend
 
