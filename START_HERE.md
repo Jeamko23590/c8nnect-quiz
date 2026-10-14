@@ -119,19 +119,17 @@ Test your live application and start using it!
 
 ## 📚 All Available Guides
 
-Here are all the guides in this project:
+Here are the essential guides you need:
 
 | File | Purpose | When to Use |
 |------|---------|-------------|
-| **`START_HERE.md`** | 👈 This file - overview and navigation | Start here first |
-| **`NEON_SETUP_ONLY.md`** | Set up Neon database | Step 2 - Database setup |
-| **`NODEJS_DEPLOYMENT_GUIDE.md`** | Deploy Node.js backend + frontend to Vercel | Step 3 - Vercel deployment ⭐ |
-| **`DEPLOYMENT_QUICK_REFERENCE.md`** | Quick reference card | Keep open while deploying |
-| **`VERCEL_ENV_VARIABLES.md`** | Reference for all environment variables | When configuring Vercel |
-| **`NEON_VERCEL_DEPLOYMENT.md`** | Original Spring Boot guide (deprecated) | Reference only |
-| **`DEPLOYMENT_CHECKLIST.md`** | Quick checklist to track progress | Track what's done |
+| **`START_HERE.md`** | 👈 This file - overview and getting started | Start here first |
+| **`NEON_SETUP_ONLY.md`** | Set up Neon PostgreSQL database | Step 1 - Database setup (5 min) |
+| **`NODEJS_DEPLOYMENT_GUIDE.md`** | Deploy Node.js backend + frontend to Vercel | Step 2 - Deploy everything (15 min) ⭐ |
+| **`MIGRATION_NOTICE.md`** | Explains backend migration from Java to Node.js | Optional - for understanding changes |
 | **`README.md`** | Project overview and local setup | Learn about the project |
 | **`API_DOCUMENTATION.md`** | API endpoints reference | When developing features |
+| **`backend-node/README.md`** | Backend-specific documentation | Backend development reference |
 
 ---
 

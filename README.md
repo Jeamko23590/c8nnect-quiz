@@ -1,17 +1,19 @@
 # Quiz Website with Leaderboard
 
-A full-stack quiz application built with React, Spring Boot, and PostgreSQL. Users answer 5 randomly selected questions from a pool of 10, and their scores are tracked on a leaderboard based on score and completion time.
+A full-stack quiz application built with React, Node.js/Express, and PostgreSQL. Users answer 5 randomly selected questions from a pool of 10, and their scores are tracked on a leaderboard based on score and completion time.
 
 ---
 
 ## 🚀 Ready to Deploy?
 
-**For complete deployment instructions, see:** [`START_HERE.md`](START_HERE.md)
+**Complete deployment guide:** [`START_HERE.md`](START_HERE.md)
 
 **Quick deployment path:**
-1. 📖 [`NEON_SETUP_ONLY.md`](NEON_SETUP_ONLY.md) - Set up database (5 min)
-2. 🚢 [`QUICK_DEPLOY.md`](QUICK_DEPLOY.md) - Deploy to Vercel (15 min)
+1. 📖 [`NEON_SETUP_ONLY.md`](NEON_SETUP_ONLY.md) - Set up Neon database (5 min)
+2. 🚢 [`NODEJS_DEPLOYMENT_GUIDE.md`](NODEJS_DEPLOYMENT_GUIDE.md) - Deploy to Vercel (15 min)
 3. ✅ Test and go live!
+
+**Total time: ~20 minutes from zero to deployed!**
 
 ---
 
@@ -29,26 +31,25 @@ A full-stack quiz application built with React, Spring Boot, and PostgreSQL. Use
 ## Technology Stack
 
 ### Backend
-- Java 17
-- Spring Boot 3.1.5
-- Spring Data JPA
-- PostgreSQL
-- Maven
-- Lombok
+- Node.js 18+
+- Express.js 4.18
+- PostgreSQL (Neon)
+- pg (PostgreSQL driver)
+- CORS enabled
+- Vercel serverless functions
 
 ### Frontend
 - React 18.2.0
 - Axios (for API calls)
 - CSS3 (with animations)
+- Vercel static hosting
 
 ## Prerequisites
 
 Before running this application, make sure you have the following installed:
 
-- **Java Development Kit (JDK) 17 or higher**
-- **Maven 3.6+**
-- **Node.js 16+ and npm**
-- **PostgreSQL 12+**
+- **Node.js 18+ and npm**
+- **PostgreSQL 12+** (or use Neon for hosted database)
 
 ## Database Setup
 
@@ -74,17 +75,24 @@ Before running this application, make sure you have the following installed:
 
 1. Navigate to the backend directory:
    ```bash
-   cd backend
+   cd backend-node
    ```
 
-2. Build the project:
+2. Install dependencies:
    ```bash
-   mvn clean install
+   npm install
    ```
 
-3. Run the Spring Boot application:
+3. Create `.env` file and configure database:
+   ```env
+   DATABASE_URL=postgresql://localhost:5432/quizdb?user=postgres&password=postgres
+   FRONTEND_URL=http://localhost:3000
+   NODE_ENV=development
+   ```
+
+4. Run the server:
    ```bash
-   mvn spring-boot:run
+   npm run dev
    ```
 
    The backend will start on `http://localhost:8080`
@@ -195,57 +203,37 @@ Returns top quiz attempts ordered by score (desc) and time (asc).
 
 ```
 Online Quiz/
-├── backend/
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/com/quiz/app/
-│   │       │   ├── config/
-│   │       │   │   ├── CorsConfig.java
-│   │       │   │   └── DataInitializer.java
-│   │       │   ├── controller/
-│   │       │   │   └── QuizController.java
-│   │       │   ├── dto/
-│   │       │   │   ├── AnswerDTO.java
-│   │       │   │   ├── LeaderboardEntryDTO.java
-│   │       │   │   ├── QuestionDTO.java
-│   │       │   │   ├── QuizResultDTO.java
-│   │       │   │   └── QuizSubmissionDTO.java
-│   │       │   ├── model/
-│   │       │   │   ├── Question.java
-│   │       │   │   └── QuizAttempt.java
-│   │       │   ├── repository/
-│   │       │   │   ├── QuestionRepository.java
-│   │       │   │   └── QuizAttemptRepository.java
-│   │       │   ├── service/
-│   │       │   │   └── QuizService.java
-│   │       │   └── QuizApplication.java
-│   │       └── resources/
-│   │           ├── application.properties
-│   │           └── data.sql
-│   └── pom.xml
+├── backend-node/              # Node.js/Express backend
+│   ├── server.js             # Main application entry
+│   ├── package.json          # Dependencies
+│   ├── vercel.json           # Vercel deployment config
+│   ├── db/
+│   │   ├── config.js         # Database connection
+│   │   └── init.js           # Database initialization
+│   ├── routes/
+│   │   └── quiz.js           # API routes
+│   └── controllers/
+│       └── quizController.js # Business logic
 │
-├── frontend/
+├── frontend/                  # React frontend
 │   ├── public/
 │   │   └── index.html
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── Leaderboard.js
-│   │   │   ├── Leaderboard.css
 │   │   │   ├── NicknameEntry.js
-│   │   │   ├── NicknameEntry.css
 │   │   │   ├── Quiz.js
-│   │   │   ├── Quiz.css
-│   │   │   ├── Results.js
-│   │   │   └── Results.css
+│   │   │   └── Results.js
 │   │   ├── services/
-│   │   │   └── api.js
+│   │   │   └── api.js        # API client
 │   │   ├── App.js
-│   │   ├── App.css
-│   │   ├── index.js
-│   │   └── index.css
+│   │   └── index.js
 │   └── package.json
 │
-└── README.md
+├── START_HERE.md             # Main deployment guide
+├── NEON_SETUP_ONLY.md        # Database setup guide
+├── NODEJS_DEPLOYMENT_GUIDE.md # Vercel deployment guide
+└── README.md                 # This file
 ```
 
 ## Questions
