@@ -1,9 +1,13 @@
 {
   "version": 2,
+  "name": "c8nnect-quiz-backend",
   "builds": [
     {
       "src": "pom.xml",
-      "use": "@vercel/java"
+      "use": "@vercel/java",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
     }
   ],
   "routes": [
@@ -11,5 +15,8 @@
       "src": "/api/(.*)",
       "dest": "/"
     }
-  ]
+  ],
+  "env": {
+    "SPRING_PROFILES_ACTIVE": "prod"
+  }
 }
